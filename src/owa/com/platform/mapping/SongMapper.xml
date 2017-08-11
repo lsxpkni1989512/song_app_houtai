@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="owa.com.platform.dao.SongDao" >
+  <resultMap id="BaseResultMap" type="owa.com.platform.entity.SongTab" >
+    <id column="innerid" property="innerid" jdbcType="VARCHAR" />
+    <result column="song_url" property="songUrl" jdbcType="VARCHAR" />
+    <result column="song_lyric_url" property="songLyricUrl" jdbcType="VARCHAR" />
+    <result column="song_type" property="songType" jdbcType="VARCHAR" />
+    <result column="song_singer" property="songSinger" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="song_name" property="songName" jdbcType="VARCHAR" /> 
+    <result column="song_album" property="songAlbum" jdbcType="VARCHAR" /> 
+    <result column="play_count" property="playCount" jdbcType="VARCHAR" /> 
+  </resultMap>
+  <sql id="Base_Song_List" >
+    innerid,song_url,song_lyric_url,song_type,song_singer,create_time,
+    update_time,status,song_name,song_album,play_count
+  </sql>
+  <!--  新增 -->
+  <insert id="insertSong"  parameterType="owa.com.platform.entity.SongTab" >
+    insert into song_tab (innerid, song_name,song_url,song_lyric_url,song_singer,song_album,create_time
+      )
+    values (#{innerid,jdbcType=VARCHAR}, #{songName,jdbcType=VARCHAR}, #{songUrl,jdbcType=VARCHAR}, #{songLyricUrl,jdbcType=VARCHAR}, #{songSinger,jdbcType=VARCHAR}, #{songAlbum,jdbcType=VARCHAR}, #{createTime,jdbcType=VARCHAR}
+      )
+  </insert>
+  <!-- 列表 -->
+  <select id="getSongListAll" resultMap="BaseResultMap">
+  	select
+	<include refid="Base_Song_List"></include>
+    from song_tab
+    where 1=1
+    <if test="songName != null" >
+    	and song_name like CONCAT('%',#{songName,jdbcType=VARCHAR},'%') 
+    </if>
+    order by create_time desc
+    <if test="rows != null" >
+	    limit #{fromIndex,jdbcType=INTEGER}, #{rows,jdbcType=INTEGER}
+    </if>
+  </select>
+</mapper>

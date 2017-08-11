@@ -1,0 +1,84 @@
+.dialogformbody{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	/*background: url("../image/bg.jpg") repeat 0 0;*/
+	font-family: 'Î¢ÈíÑÅºÚ';
+}
+
+#detailDlg {
+	padding: 20px 15px 15px 15px;
+}
+
+#detailDlg table,.dialogform tr,.dialogform th,.dialogform td {
+	padding: 0;
+	margin: 0;
+}
+
+#detailDlg table{
+	/*width: 100%;*/
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-width: 1px 0 0 1px;
+	border-style: solid;
+	border-color: #95B8E7; /* border-color:#ccc;*/
+}
+
+#detailDlg td {
+	border-width: 0 1px 1px 0;
+	border-style: solid;
+	border-color: #95B8E7;
+	background: #f9f9f9 repeat-x 0 bottom;
+	/*width: 160px;*/
+	height: 30px;
+	padding-left: 5px;
+	white-space: nowrap;
+}
+
+#detailDlg td.title {
+	width: 120px;
+	text-align: right;
+	color: #000;
+	font-size: 14px;
+}
+
+#detailDlg td.title.required {
+	font-weight: bold;
+	color: #000;
+}
+
+#detailDlg .textInput{
+	padding:0; 
+	outline:0; 
+	height:16px; 
+	border:1px solid #95B8E7; 
+	padding:2px 0 2px 0px;
+	width:110px;
+	border-radius: 4px;
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+#dialogform input[type=text]:disabled{
+	background-color: #ccc;
+}
+
+#detailDlg .select{
+	padding:0;
+	height:22px;
+	border:1px solid #95B8E7; 
+	width:112px;
+}
+
+#detailDlg .textArea{
+	margin:5px 0;
+	padding:0;
+	border:1px solid #95B8E7;
+}
+
+#detailDlg td.mine{
+	text-align: right;
+	color: #333;
+	font-size: 14px;
+	background: #e0e0e0;
+	padding-right:5px;
+}

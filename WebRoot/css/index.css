@@ -1,0 +1,125 @@
+/*---
+
+CMS CSS
+2.16.05.13
+
+---*/
+* {
+	margin:0;
+	padding:0;
+	list-style: none;
+	text-decoration: none;
+}
+
+/* 查询 */
+.queryUnit ul {
+	overflow: hidden;
+	padding-left:30px;
+	height: 60px;
+	line-height: 60px;
+	background-color:#fff;
+}
+.queryUnit ul li {
+	float: left;
+	margin-right:20px;
+}
+.queryUnit ul li input {
+	padding:5px;
+}
+.queryUnit ul li.btn a,
+.cmsButton {
+	text-decoration: none;
+	display: inline-block;
+	width:60px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	color:#fff;
+	background-color:#e2493c;
+	border-radius: 3px;
+}
+.queryUnit ul li.btn a:hover,
+.cmsButton:hover {
+	background-color:#d93b2d;
+}
+
+.winTitle {
+	padding:10px 30px;
+	background-color:#629fd5;
+}
+.winTitle h3 {
+	display: inline-block;
+	font-size: 16px;
+	height: 22px;
+	line-height: 20px;
+	border-bottom:3px solid #fff;
+	color:#fff;
+}
+.inputList {
+	overflow: hidden;
+	padding: 20px;
+}
+.inputList li {
+	float: left;
+	margin:10px 0;
+}
+.inputList li.goodsRemark,
+.inputList li.goodsPic,
+.inputList li.goodsDes,
+.inputList li.goodsPicSmall,
+.inputList li.goodsPara,
+.inputList li.goodsIntro {
+	width:100%;
+}
+.inputList li label {
+	display: inline-block;
+	width:100px;
+	font-size:12px;
+	text-align: right;
+}
+.inputList li input {
+	height: 30px;
+	padding:5px;
+	font-size: 14px;
+}
+.inputList li input[type='textarea'] {
+	width:50%;
+	height:80px;
+}
+
+
+/*-- 订单弹窗 --*/
+.orderDetailList {
+	padding:0 20px;
+}
+.orderDetailList h3 {
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	border-top:1px solid #e5e5e5;
+	border-bottom:1px solid #e5e5e5;
+}
+.orderDetailList ul {
+	overflow: hidden;
+	padding:0 10px;
+}
+.orderDetailList ul li {
+	float: left;
+	width:50%;
+	margin-bottom:10px;
+}
+.orderDetailList ul li label,
+.orderDetailList ul li span {
+	display: inline-block;
+}
+.orderDetailList ul li label {
+	padding:5px;
+	color:#888;
+}
+.orderDetailList ul li span {
+	color:#333;
+}
+.orderDetailList ul li input {
+	padding:2px;
+
+}
